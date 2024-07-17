@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+body {
+  background-color: #f0f8ff;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 10vh;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  background-color: rgb(7, 80, 106);
+  z-index: 1000;
+}
+.header a {
+  color: white;
+}
+.headerright,
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.headerright ul li {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.headerright ul li:hover {
+  transform: translateY(10px);
+}
+.headerright ul li:hover a {
+  color: black;
+}
+.headerright ul li .fa.fa-times {
+  visibility: hidden;
+}
+.fa.fa-bars {
+  visibility: hidden;
+}
+/* -----------------about me,education,exp,skills---------------------------- */
+.aboutme {
+  display: flex;
+  padding: 100px 30px;
+  font-size: x-large;
+}
+.aboutme a {
+  color: black;
+}
+
+.aboutme .description {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  line-height: 25px;
+  padding: 30px;
+  text-align: left;
+}
+.aboutme .description span {
+  color: rgb(7, 80, 106);
+}
+.aboutme .description span:hover {
+  text-decoration: underline;
+}
+.aboutme .description h1 {
+  font-size: 27x;
+}
+.aboutme .description h2 {
+  font-size: 21x;
+}
+.aboutme .description h4 {
+  font-size: 20x;
+}
+.buttons button {
+  padding: 12px;
+  letter-spacing: 2px;
+  border-style: none;
+  font-weight: bold;
+  border-radius: 50px;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  height: 50px;
+}
+.icons .fa-github,
+.fa-linkedin-in {
+  font-size: 30px;
+  color: rgb(3, 22, 31);
+}
+.icons .fa-github:hover,
+.fa-linkedin-in:hover {
+  color: rgb(7, 80, 106);
+}
+.skills {
+  /* padding: 80px; */
+  /* font-size: 17px; */
+  margin-bottom: 40%;
+}
+.skills h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.proficient {
+  padding: 90px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.proficiency {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: black solid 20px;
+}
+.proficient ul {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+}
+.progress progress {
+  border-radius: 0%;
+}
+.date {
+  text-decoration: underline;
+  font-style: italic;
+  color: grey;
+}
+.progress .industry {
+  font-weight: bold;
+}
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  margin-right: 20px;
+  z-index: 1;
+  perspective: 1000px; /*for  3D effect */
+}
+/*  to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.7s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+}
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+.progress span .education {
+  margin: 50% 50%;
+}
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: black;
+  color: #f1f1f1;
+}
+button:hover {
+  background-color: rgb(57, 135, 163);
+}
+
+p {
+  font-size: 16px;
+}
+/* -------------------Service------------------------------------- */
+#addtext {
+  display: none;
+}
+.servicesections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+.service {
+  padding: 20px;
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  box-shadow: 20px 20px 50px grey;
+  transition: all 0.3s ease-in-out;
+}
+.service:hover {
+  transform: translateY(20px);
+}
+.services {
+  margin-bottom: 80px;
+}
+
+/* -------------projects---------------------------------- */
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.projects .proj .thumbnail,
+.content {
+  width: 200px;
+}
+.proj img {
+  border-radius: 20%;
+  width: 70px;
+}
+.proj {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 20px 10px 0px;
+}
+.proj:hover {
+  background-color: rgb(7, 80, 106);
+  color: #f1f1f1;
+}
+.demo {
+  width: 150px;
+}
+h2 {
+  text-align: center;
+  padding: 20px 0px;
+  font-weight: bolder;
+  font-size: 30px;
+}
+/* -----------------recommendations ------------ */
+.recommendationsection {
+  display: flex;
+  flex-direction: row;
+}
+.recommendationsection .fpdetail {
+  display: flex;
+  gap: 20px;
+}
+.fpcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.fpdetail img {
+  width: 100px;
+  border-radius: 50%;
+}
+.fpdetail img:hover {
+  border: 5px solid black;
+}
+.fpcontent .name {
+  font-weight: bold;
+}
+/* -----------------contact me-------------------------- */
+.contact .formdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  margin-right: 250px;
+}
+.contact .formdetails input {
+  padding: 10px;
+  width: 500px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: white;
+  border: 1px solid black;
+}
+.contact .formdetails textarea {
+  height: 120px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: white;
+  padding: 5px;
+}
+
+.contact .contactdetails {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.contact .contactdetails button a {
+  color: white;
+}
+.contact {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* -------------------------------------------media query below ------------------------*/
+@media screen and (max-width: 461px) {
+  .img {
+    max-width: 100%;
+    display: block;
+    max-height: auto;
+  }
+  body {
+    width: 100%;
+  }
+  .header {
+    position: sticky;
+    background-color: rgb(7, 80, 106);
+    color: #f0f8ff;
+    left: 0;
+    width: 800px;
+  }
+  .fa.fa-bars {
+    visibility: visible;
+  }
+  .headerright ul li .fa.fa-times {
+    visibility: visible;
+  }
+  .headerright ul {
+    display: none;
+  }
+  .headerright ul li a {
+    color: white;
+  }
+  .aboutme {
+    width: 700px;
+  }
+  .aboutme .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 70px;
+  }
+  .aboutme .description .myname {
+    line-height: 45px;
+  }
+  .aboutme .photo {
+    display: none;
+  }
+  .aboutme .myname {
+    visibility: visible;
+  }
+  .proficient {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0%;
+    padding: 20px;
+  }
+  .proficient ul {
+    font-size: small;
+  }
+
+  .skills {
+    width: 800px;
+    padding: 30px;
+    margin-bottom: 300px;
+  }
+  .flip-card {
+    width: 80%;
+  }
+  .service .serviceexplanation,
+  .service button {
+    display: none;
+  }
+  .services {
+    width: 750px;
+  }
+  .projectsection {
+    width: 750px;
+  }
+  .proj .thumbnail {
+    display: none;
+  }
+  .recommendations {
+    width: 750px;
+  }
+  .recommendationsection .fpdetail .fpimg {
+    display: none;
+  }
+  .recommendationsection .fpdetail .fpcontent p,
+  span {
+    display: none;
+  }
+  .recommendations .recommendationsection {
+    gap: 90px;
+  }
+  .recommendationsection .fpdetail .fpcontent .name {
+    text-decoration: underline;
+  }
+  .recommendations .recommendationsection .service {
+    padding: 10px;
+  }
+  .contact {
+    width: 700px;
+    margin-right: 200px;
+  }
+  .formdetails textarea,
+  .formdetails button,
+  .formdetails input {
+    width: 100%;
+  }
+  .copyright {
+    margin-left: 200px;
+  }
+}
